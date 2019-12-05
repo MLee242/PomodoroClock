@@ -104,7 +104,12 @@ function outputbuttonid(button){
             let hour = Math.floor(curr / 3600); 
             let min = Math.floor((curr % 3600) / 60);
             let sec = Math.floor(curr % 3600 % 60);
-          
+            if(curr == 0){
+                const audio = document.querySelector(`audio[data-key="1"]`);
+                if (!audio) return;;
+                audio.currentTime = 0;
+                audio.play();
+            }
             
             if(min < 10){
                 min = '0' + min;
@@ -133,12 +138,13 @@ function outputbuttonid(button){
                 totalwid2 = wid-totalwid;
                 ba1.style.borderColor = "#464686";
             }else{
+                
                 ba1.style.borderColor = "#DCDCDC";
                 totalwid = 0;
                 totalwid2=wid;
             }
             
-           
+            
             ba1.style.paddingRight = `${totalwid}px`;
             ba2.style.paddingLeft = `${totalwid2}px`;
            
