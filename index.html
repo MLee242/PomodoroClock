@@ -11,7 +11,7 @@
 
 <body>
 
-<div class = "container">
+<div id = "container">
     <div class="front-panel">
         <h1>Pomodoro Clock</h1>
     </div>
@@ -23,24 +23,25 @@
         </div>
         <div class = "userinput">
             <button id = "1" class = "def arrow down pos1"></button>
-            <div class="design session-number def">1</div>
+            <div id="d1" class="design session-number def"></div>
             <button id = "2" class = "def arrow up pos2"></button>
             <div class="def empty"></div>
             <button id = "3" class = "def arrow down pos3"></button>
-            <div class="design session-number2 def">1</div>
+            <div id="d2" class="design session-number2 def"></div>
             <button id = "4" class = "def arrow up pos4"></button>
         </div>
     </div>
     <div class = "result">
-        <div class = "display">25:00</div>
+        <div class = "menu">SESSION</div>
+        <div id = "d3" class = "display">25:00</div>
         <div class ="button-bars">
             <button id = "5" class="btnpair btnp1 def">START</button>
             <div class="def empty2"></div>
-            <button id = "5" class="btnpair btnp2 def">RESET</button>
+            <button id = "6" class="btnpair btnp2 def">RESET</button>
         </div>
     </div>
     
-    <div class = "bar1"></div><div class = "bar2"></div>
+    <div id = "bar1"></div><div id = "bar2"></div>
     
     
 </div>
@@ -50,5 +51,5 @@
 
 
 
-<sciprt src = "script.js"></sciprt>
+<script src = "script.js"></script>
 </html>

@@ -1,8 +1,9 @@
+
 body{
     background : #FFF8DC
 }
 
-.container{
+#container{
     margin-top:50px;
     text-align: center;
 }
@@ -51,7 +52,7 @@ h1{
 
 .s1{
     margin-top:10px;
-    padding-right: 130px;
+    padding-right:140px;
 }
 .userinput{
     
@@ -68,10 +69,12 @@ h1{
 .session-number{
 
     width:100px;
+
 }
 .session-number2{
 
     width:100px;
+
     
 }
 .empty{
@@ -97,6 +100,18 @@ h1{
     -webkit-transform: rotate(-135deg);
 }
 
+.up:hover, .down:hover{
+    cursor:pointer;
+    border-color: saddlebrown;
+}
+.btnpair:hover{
+    cursor:pointer;
+    background-color:	#333;
+    border-color:	#333;
+    color:white;
+}
+
+
 .result{
     position:relative;
     margin: auto;
@@ -108,12 +123,17 @@ h1{
 
 .display{
    
-    margin-top:20px;
+    margin-top:0px;
     font-family:Orbitron;
-    font-size:100px;
+    font-size:75px;
     color:#999 /* #556B2F;*/
 
     
+}
+.menu{
+    color:#666;
+    font-family:Orbitron;
+    margin-top: 25px;
 }
 
 
@@ -147,22 +167,24 @@ h1{
     width:10px;
 }
 
-.bar1{
+#bar1{
     margin-top:10px;
     position:relative;
-    border: 1px solid #464686;
+    border: 1px solid 	#DCDCDC;
     border-right: 0px;
-    width:90px;
+    width:0px;
     height:10px;
     background-color:#464686;
     display:inline-block;
+    padding-right:0px;
 }
-.bar2{
+#bar2{
     position:relative;
-    border: 1px solid white;
+    border: 1px solid 	#DCDCDC;
     border-left: 0px;
-    width:360px;
+    width:0px;
+    padding-left:450px;
     height:10px;
-    background-color:white;
+    background-color:	#DCDCDC;
     display:inline-block;
 }
