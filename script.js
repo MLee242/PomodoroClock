@@ -89,13 +89,13 @@ function outputbuttonid(button){
                 curr = s;
                 incre = i;
                 state = 1;
-            }else if(s == 0 && b > 0){
+            }else if(s == 0 && b >= 0){
                 menu[0].textContent = "BREAK";
                 curr = b;
                 b = b-1;
                 incre = j;
                 state = 2;
-            }else if(b == 0){
+            }else if(b == -1){
                 s = session*60;
                 b = br*60;
                 menu[0].textContent = "SESSION";
@@ -107,7 +107,7 @@ function outputbuttonid(button){
             let hour = Math.floor(curr / 3600); 
             let min = Math.floor((curr % 3600) / 60);
             let sec = Math.floor(curr % 3600 % 60);
-            if(curr == 0 || b == 0){
+            if(curr == 0){
                 const audio = document.querySelector(`audio[data-key="1"]`);
                 if (!audio) return;;
                 audio.currentTime = 0;
