@@ -19,6 +19,7 @@ let totalwid = 0;
 let totalwid2 = 450;
 let i = 0;
 let j = 0;
+let state = 1;
 const MAXSESSION = 1000;
 const MINSESSION = 1;
 const MAXBR = 1000;
@@ -87,18 +88,20 @@ function outputbuttonid(button){
                 s = s-1;
                 curr = s;
                 incre = i;
+                state = 1;
             }else if(s == 0 && b > 0){
                 menu[0].textContent = "BREAK";
                 curr = b;
                 b = b-1;
                 incre = j;
-
+                state = 2;
             }else if(b == 0){
                 s = session*60;
                 b = br*60;
                 menu[0].textContent = "SESSION";
                 curr = s;
                 incre = i;
+                state = 3;
             }
             
             let hour = Math.floor(curr / 3600); 
@@ -133,15 +136,18 @@ function outputbuttonid(button){
             }else{
                 textcolor = '#008000';
             }
-            if(curr != br*60 && curr != session*60){
-                totalwid = totalwid + incre;
-                totalwid2 = wid-totalwid;
-                ba1.style.borderColor = "#464686";
-            }else{
-                
+
+            if(state == 3 || state == 2 && curr == br*60 ){
                 ba1.style.borderColor = "#DCDCDC";
                 totalwid = 0;
                 totalwid2=wid;
+            }else{
+
+
+            
+                totalwid = totalwid + incre;
+                totalwid2 = wid-totalwid;
+                ba1.style.borderColor = "#464686";
             }
             
             
