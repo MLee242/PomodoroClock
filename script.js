@@ -107,7 +107,7 @@ function outputbuttonid(button){
             let hour = Math.floor(curr / 3600); 
             let min = Math.floor((curr % 3600) / 60);
             let sec = Math.floor(curr % 3600 % 60);
-            if(curr == 0){
+            if(curr == 0 || b == 0){
                 const audio = document.querySelector(`audio[data-key="1"]`);
                 if (!audio) return;;
                 audio.currentTime = 0;
